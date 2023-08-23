@@ -1,0 +1,36 @@
+@import "str-to-list";
+
+.select-kit {
+  &.combo-box:not(.has-selection) {
+    &.tag-drop {
+      .select-kit-header {
+        @each $category-slug, $tag-label in $tag-nested-list {
+          body.category-#{$category-slug} & {
+            .selected-name .name {
+              visibility: hidden;
+              &:before {
+                content: $tag-label;
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.category-drop {
+      .select-kit-header {
+        @each $category-slug, $category-label in $category-nested-list {
+          body.category-#{$category-slug} & {
+            .selected-name .name {
+              visibility: hidden;
+              &:before {
+                content: $category-label;
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }      
+    }
+  }
+}

@@ -1,0 +1,8 @@
+category_name:
+  default: ""
+  type: "list"
+  description: "Semicolon delimited in this order: category name;category dropdown title"
+tag_name:
+  default: ""
+  type: "list"
+  description: "Semicolon delimited in this order: category name;tag dropdown title"
