@@ -7,11 +7,12 @@
         .select-kit-header {
           @each $category-slug, $tag-label in $tag-nested-list {
             body.category-#{$category-slug} & {
-              .selected-name .name {
-                visibility: hidden;
+              .selected-name {
                 &:before {
                   content: $tag-label;
-                  visibility: visible;
+                }
+                .name {
+                  display: none;
                 }
               }
             }
@@ -22,11 +23,12 @@
         .select-kit-header {
           @each $category-slug, $category-label in $category-nested-list {
             body.category-#{$category-slug} & {
-              .selected-name .name {
-                visibility: hidden;
+              .selected-name {
                 &:before {
                   content: $category-label;
-                  visibility: visible;
+                }
+                .name {
+                  display: none;
                 }
               }
             }
